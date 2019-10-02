@@ -30,6 +30,7 @@ let g:lightline = {
   \ }
 
 let g:CommandTCancelMap=['<C-c>', '<C-[>']
+let g:CommandTTraverseSCM='pwd'
 
 setglobal complete -=i
 setglobal complete -=t
