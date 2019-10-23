@@ -55,6 +55,7 @@ set t_ut=
 set timeoutlen=1000
 set ttimeoutlen=0
 set noshowmode
+set showcmd
 
 set splitbelow
 set incsearch
