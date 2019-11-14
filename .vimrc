@@ -2,11 +2,12 @@ call plug#begin()
 Plug 'tpope/vim-surround'
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'itchyny/lightline.vim'
-" Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'OmniSharp/omnisharp-vim'
 Plug 'wincent/command-t', {
   \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
   \ }
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 let g:ctrlp_working_path_mode = 0
@@ -70,17 +71,8 @@ set wildmenu
 nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
 
-nmap <Leader>y "+y
-nmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-vmap <Leader>p "+p
-vmap <Leader>P "+P
-
 autocmd FileType * setlocal formatoptions=crql
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
+" au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 
 " let g:OmniSharp_server_path = '/mnt/c/Program Files/OmniSharp/OmniSharp.exe'
 " let g:OmniSharp_translate_cygwin_wsl = 1
