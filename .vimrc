@@ -10,19 +10,12 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_extensions = ['tag']
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|bin|debug)$',
-  \ 'file': '\v(\.exe|\.dll|\.zip|\.pyc|tags|__init__.py|\.class)$',
-  \ }
-
 let g:netrw_list_hide='.*\.pyc$,bin/$,obj/$,debug/$'
 let g:netrw_preview = 1
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 
-set wildignore=*.dll,*.pyc,*.pdb,*/bin/*,*/obj/*,*.class
+set wildignore=*.dll,*.pyc,*.pdb,*/bin/*,*/obj/*,*.class,*/node_modules/*,*/env/*
 
 colorscheme termschool
 
@@ -70,6 +63,8 @@ set wildmenu
 
 nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
+
+nnoremap <leader>p :set invpaste<CR>
 
 autocmd FileType * setlocal formatoptions=crql
 " au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim

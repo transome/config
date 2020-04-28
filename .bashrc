@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[01;32m\]\w>\[\033[00m\] '
+    PS1='\[\033[01;32m\]\W>\[\033[00m\] '
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -89,8 +89,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -A1'
-alias la='ls -A'
+# alias ll='ls -A1'
+# alias la='ls -A'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -117,7 +117,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export VISUAL=vim
-export EDITOR="$VISUAL"
+# export VISUAL=vim
+# export EDITOR="$VISUAL"
 
-eval `keychain -q --eval --agents ssh id_rsa`
+# set -o vi
+
+# PATH=$PATH:~/bin
+
+# eval `keychain -q --eval --agents ssh id_rsa`
+
+# export NVM_DIR="/home/tim/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
