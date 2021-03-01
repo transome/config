@@ -126,5 +126,7 @@ fi
 
 # eval `keychain -q --eval --agents ssh id_rsa`
 
+stty -ixon
+
 # export NVM_DIR="/home/tim/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

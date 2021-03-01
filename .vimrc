@@ -15,7 +15,7 @@ let g:netrw_preview = 1
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 
-set wildignore=*.dll,*.pyc,*.pdb,*/bin/*,*/obj/*,*.class,*/node_modules/*,*/env/*
+set wildignore=*.dll,*.pyc,*.pdb,*/bin/*,*/obj/*,*.class,*/node_modules/*,*/env/*,*/packages/*
 
 colorscheme termschool
 
@@ -30,7 +30,6 @@ setglobal complete -=i
 setglobal complete -=t
 
 syntax on
-set cursorline
 set hidden
 set nowrap
 set nu
@@ -67,6 +66,12 @@ let mapleader = "\<Space>"
 nnoremap <leader>p :set invpaste<CR>
 
 autocmd FileType * setlocal formatoptions=crql
+
+augroup CursorLineOnlyInActiveWindow
+  autocmd!
+  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
+augroup END
 " au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 
 " let g:OmniSharp_server_path = '/mnt/c/Program Files/OmniSharp/OmniSharp.exe'
